@@ -2,7 +2,6 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
-import Header from '../components/Header';
 import { url } from '../helpers/url'
 function Main () {
   const [categoryId, setcategoryId] = useState([])
@@ -112,7 +111,7 @@ function Main () {
 
   return (
     <div className='container mx-auto py-5'>
-        <Header/>
+        {/* <Header/> */}
       <div >
         { 
           categoryId.length > 0 && 
