@@ -13,7 +13,7 @@ function Register() {
   const navigate = useNavigate()
 
   const loginPage = () => {
-    navigate('/login')
+    navigate('/x  ')
   }
 
   const addUser = () => {
@@ -29,7 +29,7 @@ function Register() {
         console.log(res);
         setAdd(res.config.data)
         toast.success("Ro'yxatdan o'tdingiz")
-        if(res.status == 200 || res.status == 201){
+        if(res.status === 200 || res.status === 201){
           navigate("/login")
         }else {
           navigate("/register")
@@ -37,7 +37,7 @@ function Register() {
         }
       }).catch(err => {
         console.error(err);
-        toast.warn("Ro'yxatni to'ldiring")
+        toast.error("Iltimos ro'yxatdan o'ting")
       })
 
   }
